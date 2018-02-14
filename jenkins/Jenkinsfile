@@ -1,8 +1,6 @@
 pipeline {
-    node {
-        sh "usermod -a -G docker $USER"
-    }
     agent {
+        sh 'usermod -a -G docker $USER'
         docker {
             image 'node:6-alpine'
             args '-p 3000:3000'
