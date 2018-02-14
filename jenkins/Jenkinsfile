@@ -1,11 +1,4 @@
 pipeline {
-    stages {
-        stage('Initiallization') {
-            steps {
-                sh 'usermod -a -G docker $USER'
-            }
-        }
-    }
     agent {
         docker {
             image 'node:6-alpine'
