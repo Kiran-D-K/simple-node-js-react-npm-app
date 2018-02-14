@@ -1,6 +1,6 @@
 pipeline {
     node {
-        sh 'usermod -a -G docker $USER'
+        sh "usermod -a -G docker $USER"
     }
     agent {
         docker {
