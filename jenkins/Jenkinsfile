@@ -10,12 +10,9 @@ pipeline {
     }
     stages {
         stage('Build') {
-              dir ('./') { 
-    sh('npm install') 
-         }
- //           steps {
- //               sh 'npm install'
- //           }
+            steps {
+                sh 'npm install'
+           }
         }
         stage('Test') {
             steps {
